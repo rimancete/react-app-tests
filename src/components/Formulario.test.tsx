@@ -22,7 +22,7 @@ describe('"Cadastro de Participantes" screen - Formulario', () => {
     expect(button).toBeDisabled();
   });
 
-  test("should add a participant when participant input is filled", () => {
+  test("should add an item when participant input is filled", () => {
     render(
       <RecoilRoot>
         <Formulario />
