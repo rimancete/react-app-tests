@@ -7,10 +7,16 @@ import Rodape from "./Rodape"
 jest.mock('../state/hooks/useListaDeParticipante')
 
 const mockNavigation = jest.fn()
+const mockSorteio = jest.fn()
 
 jest.mock('react-router-dom', () => {
     return {
         useNavigate: () => mockNavigation
+    }
+})
+jest.mock('../state/hooks/useSorteador', () => {
+    return {
+        useSorteador: () => mockSorteio
     }
 })
 
@@ -51,5 +57,6 @@ describe('"Cadastro de Participantes" screen - Sufficiente participant list', ()
 
         expect(mockNavigation).toHaveBeenCalledTimes(1)
         expect(mockNavigation).toHaveBeenCalledWith('/sorteio')
+        expect(mockSorteio).toHaveBeenCalledTimes(1)
     })
 })
