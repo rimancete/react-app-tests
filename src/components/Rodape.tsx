@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useListaDeParticipantes } from "../state/hooks/useListaDeParticipante"
 import { useSorteador } from "../state/hooks/useSorteador"
 
+import './Rodape.css'
 
 const Rodape = () => {
     const participants = useListaDeParticipantes()

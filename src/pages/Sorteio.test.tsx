@@ -31,7 +31,7 @@ describe('secret santa generator screen', () => {
             <Sorteio />
         </RecoilRoot>)
         const options = screen.queryAllByRole('option')
-        expect(options).toHaveLength(3)
+        expect(options).toHaveLength(participants.length + 1)
     })
     test('should display its own secret friend', () => {
         render(<RecoilRoot>
